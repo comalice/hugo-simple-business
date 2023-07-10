@@ -1,0 +1,61 @@
+{{ partial "head.html" . }}
+<body>
+  {{ partial "header.html" . }}
+  <center>
+    <h1>
+      {{ .Site.Title }}
+    </h1>
+    <img src="/logo.svg" width="480px">
+    <hr>
+
+    <h2>Contact</h2>
+
+    {{ if .Site.Params.Phone }}
+    <p>
+      <a class="button" href="tel:{{ string .Site.Params.Phone }}">Call Now {{ .Site.Params.Phone }}</a>
+    </p>
+    {{ end }}
+    {{ if .Site.Params.Email }}
+    <p>
+      <a href="mailto:{{ .Site.Params.Email }}">Email: {{ .Site.Params.Email }}</a>
+    </p>
+    {{ end }}
+    {{ if .Site.Params.LocationsDescription }}
+    <h2>Service Areas</h2>
+    <p>
+      {{ .Site.Params.LocationsDescription }}
+      <br>
+      <dl>
+        {{ range .Site.Params.Locations }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </dl>
+    </p>
+    {{ end }}
+
+    {{ if .Site.Params.ServicesTitle }}
+    <p>
+      <h2>{{ .Site.Params.ServicesTitle }}</h2>
+      {{ if .Site.Params.Services }}
+      <dl>
+        {{ range .Site.Params.Services }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </dl>
+      {{ end }}
+    </p>
+    {{ end }}
+
+    {{ if .Site.Params.Hours }}
+    <p>
+      <h2>Hours</h2>
+      <dl>
+        {{ range .Site.Params.Hours }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </dl>
+    </p>
+    {{ end }}
+    {{ partial "footer.html" . }}
+  </center>
+</body>

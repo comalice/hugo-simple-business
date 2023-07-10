@@ -1,0 +1,20 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ .Site.Title }} - {{ delimit .Site.Params.Locations ", " }}</title>
+    <meta name="description" content="{{ .Site.Params.Description }}">
+    <meta name="author" content="{{ .Site.Author }}">
+
+    <meta property="og:title" content="{{ .Site.Title }} - {{ delimit .Site.Params.Locations ", " }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joetowing.com">
+    <meta property="og:description" content="{{ .Site.Params.Description }}">
+    <meta property="og:image" content="{{ .Site.Params.LogoPath }}">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/milligram.min.css">
+</head>
