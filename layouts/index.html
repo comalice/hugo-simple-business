@@ -1,6 +1,4 @@
-{{ partial "head.html" . }}
-<body>
-  {{ partial "header.html" . }}
+{{ define "main" }}
   <center>
     <h1>
       {{ .Site.Title }}
@@ -58,4 +56,4 @@
     {{ end }}
     {{ partial "footer.html" . }}
   </center>
-</body>
+{{ end }}
