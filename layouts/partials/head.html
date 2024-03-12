@@ -12,11 +12,11 @@
     <meta property="og:description" content="{{ .Site.Params.Description }}">
     <meta property="og:image" content="{{ .Site.Params.LogoPath }}">
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ .Site.BaseURL }}favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png">
 
-    <link rel="stylesheet" href="css/milligram.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/milligram.min.css">
     {{ template "_internal/google_analytics.html" . }}
     {{ partial "google_tags.html" . }}
 </head>
