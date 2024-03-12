@@ -1,4 +1,4 @@
-{{ if isset .Site.Params.GoogleTag }}
+{{ if isset .Site.Params "googletag" }}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GoogleTag }}"></script>
 <script>
@@ -9,8 +9,8 @@
   gtag('config', '{{ .Site.Params.GoogleTag }}');
 </script>
 <script>
-  gtag('config', 'AW-1006853375/t9O2CPjI95kZEP-5jeAD', {
-	  'phone_conversion_number': '{{ .Site.Params.PhoneNumber }}'
+	gtag('config', '{{ .Site.Params.GoogleTag }}/t9O2CPjI95kZEP-5jeAD', {
+	  'phone_conversion_number': '{{ .Site.Params.Phone }}'
   });
 </script>
 {{ end }}
